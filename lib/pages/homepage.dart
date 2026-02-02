@@ -73,7 +73,6 @@ class _HomeContentState extends State<HomeContent> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                
                 //search bar
                 Padding(
                   padding: const EdgeInsets.symmetric(
@@ -131,7 +130,6 @@ class _HomeContentState extends State<HomeContent> {
                   ),
                 ),
                 const SizedBox(height: 40),
-
 
                 // CTA BUTTON
                 ElevatedButton(
@@ -266,4 +264,3 @@ class FeaturedCard extends StatelessWidget {
     );
   }
 }
-
