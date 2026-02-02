@@ -73,7 +73,65 @@ class _HomeContentState extends State<HomeContent> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                
                 //search bar
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 16,
+                  ),
+                  child: SizedBox(
+                    height: 45,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Search recipes, meals, plans...",
+                        prefixIcon: const Icon(Icons.search),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 0),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide.none,
+                        ),
+                        fillColor: isDark ? Colors.grey[800] : Colors.grey[200],
+                        filled: true,
+                      ),
+                    ),
+                  ),
+                ),
+                // LOGO
+                AnimatedScale(
+                  duration: const Duration(milliseconds: 900),
+                  curve: Curves.easeOutBack,
+                  scale: animate ? 1 : 0.6,
+                  child: Image.asset('lib/images/logo.png', height: 120),
+                ),
+
+                const SizedBox(height: 20),
+
+                // APP NAME
+                AnimatedOpacity(
+                  duration: const Duration(seconds: 1),
+                  opacity: animate ? 1 : 0,
+                  child: Text(
+                    'AnyFeast',
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 8),
+
+                // TAGLINE
+                AnimatedOpacity(
+                  duration: const Duration(seconds: 2),
+                  opacity: animate ? 1 : 0,
+                  child: Text(
+                    'Plan • Cook • Enjoy',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+                const SizedBox(height: 40),
+
 
                 // CTA BUTTON
                 ElevatedButton(
